@@ -1,27 +1,32 @@
-import { useState, useEffect } from 'react';
-import { LockOutlined, UserOutlined } from '@ant-design/icons';
-import { Button, Form, Input } from 'antd';
-import './_auth.scss';
+import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { LockOutlined, UserOutlined } from '@ant-design/icons'
+import { Button, Form, Input } from 'antd'
+import './_auth.scss'
 
 const Login = () => {
-  const [form] = Form.useForm();
-  const [clientReady, setClientReady] = useState<boolean>(false);
+  const navigate = useNavigate()
+  const [form] = Form.useForm()
+  const [clientReady, setClientReady] = useState<boolean>(false)
 
   useEffect(() => {
-    setClientReady(true);
-  }, []);
+    setClientReady(true)
+  }, [])
 
   const onFinish = (values: any) => {
-    console.log('Finish:', values);
-  };
+    console.log('Finish:', values)
+    navigate('/dashboard')
+  }
 
   return (
     <div className="auth-layout">
       <div className="auth-card">
         <h4 className="auth-card-title">Login Now</h4>
-        <p className="auth-card-description">Welcome, Please login to your account.</p>
+        <p className="auth-card-description">
+          Welcome, Please login to your account.
+        </p>
         <Form
-          form={form}          
+          form={form}
           layout="vertical"
           onFinish={onFinish}
           className="flex-direction-column"
