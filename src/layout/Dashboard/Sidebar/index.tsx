@@ -1,10 +1,11 @@
 import { FC } from 'react'
-import {
-  UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-} from '@ant-design/icons'
 import { Layout, Menu } from 'antd'
+
+import DashboardIcon from '../../../components/icons/DashboardIcon'
+import PropertyIcon from '../../../components/icons/PropertyIcon'
+import CustomerIcon from '../../../components/icons/CustomerIcon'
+
+import './_sidebar.scss';
 
 interface LayoutSidebarProps {
   collapsed: boolean
@@ -19,21 +20,22 @@ const LayoutSidebar: FC<LayoutSidebarProps> = ({ collapsed }) => {
         theme="dark"
         mode="inline"
         defaultSelectedKeys={['1']}
+        className="left-sidebar"
         items={[
           {
             key: '1',
-            icon: <UserOutlined />,
-            label: 'nav 1',
+            icon: <DashboardIcon />,
+            label: 'Dashboard',                        
           },
           {
             key: '2',
-            icon: <VideoCameraOutlined />,
-            label: 'nav 2',
+            icon: <PropertyIcon />,
+            label: 'Properties',
           },
           {
             key: '3',
-            icon: <UploadOutlined />,
-            label: 'nav 3',
+            icon: <CustomerIcon />,
+            label: 'Customers',
           },
         ]}
       />
