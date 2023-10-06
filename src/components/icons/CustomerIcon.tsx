@@ -2,7 +2,11 @@ import React from 'react'
 
 const CustomerIcon = () => {
   return (
-    <span role="img" aria-label="video-camera" className="anticon ant-menu-item-icon">
+    <span
+      role="img"
+      aria-label="video-camera"
+      className="anticon ant-menu-item-icon"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="25"
@@ -15,7 +19,7 @@ const CustomerIcon = () => {
           fill="#FBFCFC"
         />
       </svg>
-    </span>    
+    </span>
   )
 }
 
