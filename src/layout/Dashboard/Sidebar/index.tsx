@@ -33,7 +33,7 @@ const LayoutSidebar: FC<LayoutSidebarProps> = ({ collapsed }) => {
     <Sider
       trigger={null}
       collapsible
-      collapsed={collapsed}      
+      collapsed={collapsed}
       className="left-sidebar"
     >
       <div className="sidebar-logo">LOGO</div>
@@ -42,7 +42,7 @@ const LayoutSidebar: FC<LayoutSidebarProps> = ({ collapsed }) => {
         mode="inline"
         defaultSelectedKeys={['/dashboard']}
         selectedKeys={[current]}
-        onClick={handleClick}        
+        onClick={handleClick}
         items={[
           {
             key: '/dashboard',
