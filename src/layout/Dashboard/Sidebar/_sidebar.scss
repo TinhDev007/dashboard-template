@@ -1,5 +1,33 @@
 .left-sidebar {
-  .ant-menu-item {
-    line-height: 48px !important;
-  } 
+  background: #44615C !important;
+
+  .sidebar-logo {
+    color: #fff;
+    font-family: Raleway;
+    font-size: 21px;    
+    font-weight: 900;
+    line-height: 160%;
+    text-align: center;
+    margin: 27px 0 46px;
+  }
+
+  .ant-menu {
+    background: #44615C;
+
+    &-item {
+      line-height: 48px !important;
+
+      &-selected {
+        margin-left: 0 !important;
+        margin-right: 20px !important;
+        width: calc(100% - 20px) !important;
+        border-radius: 0 40px 40px 0 !important;
+        background-color: rgba($color: #fff, $alpha: 0.89);
+
+        a {
+          color: #44615C !important;
+        }
+      }
+    }
+  }
 } 

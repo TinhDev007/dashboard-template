@@ -15,31 +15,34 @@ interface LayoutSidebarProps {
 const LayoutSidebar: FC<LayoutSidebarProps> = ({ collapsed }) => {
   const location = useLocation()
   const { Sider } = Layout
-  
+
   const [current, setCurrent] = useState(location.pathname)
   const handleClick = (event: { key: SetStateAction<string> }) => {
     setCurrent(event.key)
-  };
+  }
 
   useEffect(() => {
-    if (location) {      
+    if (location) {
       if (current === location.pathname) {
         setCurrent(location.pathname)
       }
     }
   }, [location, current])
 
-
   return (
-    <Sider trigger={null} collapsible collapsed={collapsed}>
-      <div>LOGO</div>
+    <Sider
+      trigger={null}
+      collapsible
+      collapsed={collapsed}      
+      className="left-sidebar"
+    >
+      <div className="sidebar-logo">LOGO</div>
       <Menu
-        theme="dark"
+        // theme="dark"
         mode="inline"
         defaultSelectedKeys={['/dashboard']}
-        className="left-sidebar"
         selectedKeys={[current]}
-        onClick={handleClick}
+        onClick={handleClick}        
         items={[
           {
             key: '/dashboard',
